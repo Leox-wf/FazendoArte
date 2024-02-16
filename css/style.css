@@ -1,0 +1,31 @@
+body{
+    background-color: #ffffff;
+    font-family: "Arial";
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*-------------------HEADER-------------------------------------*/
+header{
+    background-color: rgb(5, 5, 114);  
+}
+
+.logo_header{
+    position: relative;
+}
+
+.logo{
+    width: 10%;
+}
+
+/*-------------------TABLE-------------------------------------*/
+
+table, th, td {
+    border:1px solid black;
+  }
+
+table{
+    width:100%;
+}
+
