@@ -13,15 +13,22 @@ for (var count=0; count < clientes.length; count++){
     if(qtde<1 || isNaN(qtde)){
         //quantidade ok, avisa o usuario
         clientes[count].querySelector(".info-qtde").textContent = "qtde invalida!";
-        //clientes[count].style.color="red";
-        clientes[count].style.backgroundColor="red";
+        clientes[count].querySelector.info-qtde.toLocalString('pt-BR',{style:'currency',currency:'BRL'});
+        clientes[count].querySelector("info-qtde").style.color="red";
+        //clientes[count].style.backgroundColor="red";
     }else{
+        
+        if(unitario <= 0 || isNaN(unitario)){
+            clientes[count].querySelector(".info-total").textContent ="Valor invalido"
+            clientes[count].style.backgroundColor="red";
+        }else{    
         //Quantidade ok, prossegue
         //calcula o valor total da encomenda
         clientes[count].querySelector(".info-total").textContent = calculaTotal(qtde,unitario);
+        }
     }
 
-    //calcula o valor totaç da encomenda
+    //calcula o valor total da encomenda
     //1º teste clientes[count].querySelector(".info-total").textContent = qtde * unitario;
     //2º teste clientes[count].querySelector(".info-total").textContent = calculaTotal(qtde,unitario);
 
